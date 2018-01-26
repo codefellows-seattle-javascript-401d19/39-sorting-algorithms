@@ -1,6 +1,5 @@
 'use strict';
 
-// 9, 1, 5, 8, 2, 7, 3, 6, 4, 5
 const quickSort = items => {
   if (items.length <= 1) return items;
   const pivot = items[items.length - 1];
@@ -21,7 +20,6 @@ const quickSort = items => {
     if (items[i] === pivot){
       items.push(...items.splice(i, 1));
       pivotIndex--;
-      // firstHighIndex--;
       i--;
     } 
   }
@@ -36,33 +34,6 @@ const quickSort = items => {
   }
   return [...leftSide, ...items.slice(pivotIndex, items.length), ...rightSide];
 };
-
-// const quickSort = items => {
-//   _quickSortHelper(items, 0, items.length - 1);
-// };
-
-// const _quickSortHelper = (items, leftIndex, rightIndex) => {
-//   if (rightIndex > leftIndex) {
-//     let partitionIndex = _partition(items, leftIndex, rightIndex);
-
-//     _quickSortHelper(items, leftIndex, partitionIndex - 1);
-//     _quickSortHelper(items, partitionIndex + 1, rightIndex);
-//   }
-// };
-
-// const _partition = (items, leftIndex, rightIndex) => {
-//   let pivotIndex = rightIndex;
-//   let firstHighIndex = leftIndex;
-
-//   for (let i = leftIndex; i < rightIndex; i++) {
-//     if (items[i] < items[pivotIndex]) {
-//       _swap(items, i, firstHighIndex);
-//       firstHighIndex++;
-//     }
-//   }
-//   _swap(items, pivotIndex, firstHighIndex);
-//   return firstHighIndex;
-// };
 
 const _swap = (items, indexA, indexB) => {
   let helper = items[indexA];
