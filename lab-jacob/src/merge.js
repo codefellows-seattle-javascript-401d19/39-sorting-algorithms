@@ -15,21 +15,23 @@ const mergeSort = (items) => {
 
   while(leftSide.length || rightSide.length){
     if(leftSide.length && !rightSide.length){
-      return output.push.apply(leftSide);
-      
+      output.push(...leftSide);
+      break;
     }
     if(!leftSide.length && rightSide.length){
-      return output.push.apply(rightSide); 
-    
+      output.push(...rightSide); 
+      break;
     }
     if(leftSide[0] <= rightSide[0])
       output.push(leftSide.shift());
+      
     else
       output.push(rightSide.shift());
   }
 
   return output;
 };
-
+let arr = [3,1,24];
+mergeSort(arr);
 module.exports = mergeSort;
 
