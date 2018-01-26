@@ -1,0 +1,29 @@
+{
+  "name": "lab-andrew",
+  "version": "1.0.0",
+  "description": "sorting-algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALB37/39-sorting-algorithms.git"
+  },
+  "keywords": [
+    "sorting",
+    "nlogn",
+    "quicksort",
+    "mergesort"
+  ],
+  "author": "Andrew Bloom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ALB37/39-sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/ALB37/39-sorting-algorithms#readme",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
