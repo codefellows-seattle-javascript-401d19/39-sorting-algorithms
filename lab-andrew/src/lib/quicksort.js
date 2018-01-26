@@ -31,7 +31,7 @@ const _quickSort = items => {
       }
     }
     if (items[i] === pivot){
-      items.splice(items.length - 2, 0, ...items.splice(i, 1));
+      items.splice(pivotIndex, 0, ...items.splice(i, 1));
       pivotIndex--;
       i--;
     } 
