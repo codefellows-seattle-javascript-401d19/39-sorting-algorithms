@@ -1,6 +1,16 @@
 'use strict';
 
+const insertionSort = require('./insertion-sort');
+
 const quickSort = items => {
+  if (items.length < 13){
+    return insertionSort(items);
+  }
+  return _quickSort(items);
+};
+
+const _quickSort = items => {
+  
   if (items.length <= 1) return items;
 
   const pivot = items[items.length - 1];
@@ -21,7 +31,7 @@ const quickSort = items => {
       }
     }
     if (items[i] === pivot){
-      items.push(...items.splice(i, 1));
+      items.splice(items.length - 2, 0, ...items.splice(i, 1));
       pivotIndex--;
       i--;
     } 
@@ -31,12 +41,12 @@ const quickSort = items => {
 
   const leftSide = [];
   if (firstHighIndex > 0){
-    leftSide.push(...quickSort(items.slice(0, firstHighIndex)));
+    leftSide.push(..._quickSort(items.slice(0, firstHighIndex)));
   }
 
   const rightSide = [];
   if (firstHighIndex !== pivotIndex){
-    rightSide.push(...quickSort(items.slice(firstHighIndex, pivotIndex)));
+    rightSide.push(..._quickSort(items.slice(firstHighIndex, pivotIndex)));
   }
 
   return [...leftSide, ...items.slice(pivotIndex, items.length), ...rightSide];

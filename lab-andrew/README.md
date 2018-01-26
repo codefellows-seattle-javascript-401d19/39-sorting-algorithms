@@ -22,7 +22,7 @@ The only module being exported is the quicksort method.
 ***
 ### Quicksort:
 
-The quicksort method will take an array of numbers and return the sorted array using a divide and conquer scheme, resulting in an average runtime of O(n*log(n)). The worst case will be 0(n^2), which will occur when the array is ordered in reverse (i.e. [5, 4, 3, 2, 1]). The big O of space will be O(n), as the array is being copied with the slice method. 
+The quicksort method will take an array of numbers and return the sorted array using a divide and conquer scheme, resulting in an average runtime of O(n*log(n)). The worst case will be 0(n^2), which will occur when the array is already in order or ordereded in reverse (i.e. [5, 4, 3, 2, 1]). The big O of space will be O(n), as the array is being copied with the slice method. 
 
 The quicksort works by comparing each value to a reference (in this case the last value in the array) and swapping all the values smaller than this value to the left side of the first value found that is larger than the reference. If a value is equal, it is moved next to the reference value. The quicksort method is then recursively called on each of the subsections of the array, and the resulting sorted segments are reassembled according to order from lowest to highest.
 

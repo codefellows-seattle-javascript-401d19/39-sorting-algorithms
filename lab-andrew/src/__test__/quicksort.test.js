@@ -33,6 +33,14 @@ describe('testing quickSort for correct functionality', () => {
   });
 
   describe('random tests', () => {
+    test('testing tiny length array of a small range of values', () => {
+      const testArray = validate.randomArray(10, 3);
+      expect(validate.isSorted(quickSort(testArray))).toEqual(true);
+    });
+    test('testing tiny length array of a medium range of values', () => {
+      const testArray = validate.randomArray(10, 10);
+      expect(validate.isSorted(quickSort(testArray))).toEqual(true);
+    });
     test('testing small length array of a small range of values', () => {
       const testArray = validate.randomArray(20, 3);
       expect(validate.isSorted(quickSort(testArray))).toEqual(true);
