@@ -31,7 +31,6 @@ const mergeSort = (items) => {
 
   return output;
 };
-let arr = [3,1,24];
-mergeSort(arr);
+
 module.exports = mergeSort;
 
