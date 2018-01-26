@@ -2,9 +2,12 @@
 
 const quickSort = items => {
   if (items.length <= 1) return items;
+
   const pivot = items[items.length - 1];
   let pivotIndex = items.length - 1;
+
   let firstHighIndex = pivotIndex;
+
   for (let i = 0; i < pivotIndex; i++){
     if (items[i] < pivot){
       if (i > firstHighIndex){
@@ -23,15 +26,19 @@ const quickSort = items => {
       i--;
     } 
   }
+
   if (pivotIndex === 0) return items;
+
   const leftSide = [];
   if (firstHighIndex > 0){
     leftSide.push(...quickSort(items.slice(0, firstHighIndex)));
   }
+
   const rightSide = [];
   if (firstHighIndex !== pivotIndex){
     rightSide.push(...quickSort(items.slice(firstHighIndex, pivotIndex)));
   }
+
   return [...leftSide, ...items.slice(pivotIndex, items.length), ...rightSide];
 };
 
