@@ -28,7 +28,12 @@ The quicksort works by comparing each value to a reference (in this case the las
 
 ### Mergesort:
 
-The mergesort method will take an array of numbers and return the sorted array, it also uses a divide and conquer shceme. The runtime will always be O(n*log(n)). It works by splitting the array into two smaller arrays down the middle, recursively performs mergesort on each of those smaller arrays, and then compares each of the values in the two sorted arrays and merges them back into one sorted array. The space complexity will be O(log(n)), which is the size of the recursive call stack.
+The mergesort method will take an array of numbers and return the sorted array, it also uses a divide and conquer scheme. The runtime will always be O(n*log(n)). It works by splitting the array into two smaller arrays down the middle, recursively performs mergesort on each of those smaller arrays, and then compares each of the values in the two sorted arrays and merges them back into one sorted array. The space complexity will be O(log(n)), which is the size of the recursive call stack.
+
+### Heapsort:
+
+The heapsort method takes an array of numbers and returns the sorted array, however, it does not use the divide and conquer scheme, although it does keep a O(n*log(n)) runtime. It works by inserting each of the values in an array into a heap. Then it extracts each of the values from that heap. Based on how a heap works, the values will be extracted in order. The sort algorithm itself has a constant space big O, however, the space complexity ultimately depends on the implementation of the heap that it depends on. The heap in this case has a space complexity of O(log(n)) which corresponds to the height of the heap, as this will be the max number of recursive calls in the call stack.
+
 
 ***
 ## Code Examples:
