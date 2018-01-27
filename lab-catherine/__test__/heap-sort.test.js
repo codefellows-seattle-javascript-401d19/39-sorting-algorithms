@@ -1,9 +1,11 @@
 'use strict';
 
 const heapSort = require('../src/heap-sort');
+const testFunction = require('./test-function');
+
 
 describe('testing heap-sort.js', () => {
-  
+
   describe('testing that heapSort is functioning properly', () => {
     test('testing that heapSort returns a sorted array', () => {
       let arrayToSort = [8, 1, 5, 7, 4, 9, 2, 3, 6];
@@ -29,5 +31,26 @@ describe('testing heap-sort.js', () => {
       let arrayToSort = [8, 1, 25, 7, 11, 9, 2, 3, 6, 10];
       expect(heapSort(arrayToSort)).toEqual([1, 2, 3, 6, 7, 8, 9, 10, 11, 25]);
     });
+  });
+
+  describe('testing random arrays', () => {
+    test('testing that small array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(8, 3);
+      let arrayToValidate = testFunction.validateArray(heapSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+
+    test('testing that medium array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(100, 100);
+      let arrayToValidate = testFunction.validateArray(heapSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+    
+    test('testing that large array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(10000, 10000);
+      let arrayToValidate = testFunction.validateArray(heapSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+ 
   });
 });
