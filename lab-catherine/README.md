@@ -9,17 +9,64 @@ Catherine Looper
 
 ### Build
 
-#### Stable Quick Sort
-
 #### Mutate Merge Sort's Input Array
 
-#### Radix Sort
+The Merge Sort method accepts an array of items to be sorted. In this implementation, the input array is mutated and returned as a sorted array using a divide and conquer approach. The input array is divided into two arrays (split at the middle point). The values in each array are compared and sorted and ultimately pushed back together into the final sorted array. The Big O of time for this sort method is O(n log(n)) and Big O of space is O(log(n)).
+
+```
+  test('testing that mergeSort returns a sorted array', () => {
+      let arrayToSort = [8, 1, 5, 7, 4, 9, 2, 3, 6];
+      expect(mergeSort(arrayToSort)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    });
+```
 
 #### Heap Sort
 
-#### Quick Sort/Insertion Sort Hybrid
+The Heap Sort method accepts an array of items to be sorted. This method also relies on a Max Heap to perform `insert()` and `extractMaximum()` functions. The Heap Sort inserts all of the values into the maximumHeap while removing them from the array. Once all items in the array have been inserted, then each value is removed from the heap using the `extractMaximum()` method and using, `unshift`, are re-inserted back into the beginning of the array. The Big O of time for this sort method is O(n log(n)) and Big O of space is O(log(n)) where n is the height of the heap.
 
-#### Quick Sort With 3-Way Partition
+```
+   test('testing that heapSort returns a sorted array', () => {
+      let arrayToSort = [8, 1, 5, 7, 4, 9, 2, 3, 6];
+      expect(heapSort(arrayToSort)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    });
+```
+
+#### Test Functions
+
+In this project, I implemented a test helper function that allows the project to be tested using a random array generator and a validate array method. To use the test helper function, it simply must be required in at the top of the test file:
+
+```const testFunction = require('./test-function');```
+
+The test function:
+
+```
+'use strict';
+
+const testFunction = module.exports = {};
+
+testFunction.generateRandomArray = (length, max) => {
+  return [...new Array(length)]
+    .map(() => Math.round(Math.random() * max));
+};
+
+testFunction.validateArray = (array) => {
+  for(let i = 0; i < array.length - 1; i++) {
+    if(array[i] < array[i + 1])
+      return true;
+  }
+};
+```
+
+An example of a test:
+
+```
+ test('testing that large array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(10000, 10000);
+      let arrayToValidate = testFunction.validateArray(heapSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+  });
+```
 
 ### Limitations
 

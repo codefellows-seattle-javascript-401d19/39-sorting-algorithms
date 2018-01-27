@@ -3,7 +3,6 @@
 const heapSort = require('../src/heap-sort');
 const testFunction = require('./test-function');
 
-
 describe('testing heap-sort.js', () => {
 
   describe('testing that heapSort is functioning properly', () => {
