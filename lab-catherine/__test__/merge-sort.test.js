@@ -1,6 +1,7 @@
 'use strict';
 
 const mergeSort = require('../src/merge-sort');
+const testFunction = require('./test-function');
 
 describe('testing merge-sort.js', () => {
   
@@ -28,6 +29,26 @@ describe('testing merge-sort.js', () => {
     test('testing that mergeSort will return the correct order with multi-digit integers', () => {
       let arrayToSort = [8, 1, 25, 7, 11, 9, 2, 3, 6, 10];
       expect(mergeSort(arrayToSort)).toEqual([1, 2, 3, 6, 7, 8, 9, 10, 11, 25]);
+    });
+  });
+
+  describe('testing random arrays', () => {
+    test('testing that small array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(8, 3);
+      let arrayToValidate = testFunction.validateArray(mergeSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+
+    test('testing that medium array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(100, 100);
+      let arrayToValidate = testFunction.validateArray(mergeSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
+    });
+    
+    test('testing that large array will be sorted', () => {
+      let arrayToSort = testFunction.generateRandomArray(10000, 10000);
+      let arrayToValidate = testFunction.validateArray(mergeSort(arrayToSort));
+      expect(arrayToValidate).toEqual(true);
     });
   });
 });

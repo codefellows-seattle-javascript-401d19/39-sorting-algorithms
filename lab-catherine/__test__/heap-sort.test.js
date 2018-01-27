@@ -51,6 +51,5 @@ describe('testing heap-sort.js', () => {
       let arrayToValidate = testFunction.validateArray(heapSort(arrayToSort));
       expect(arrayToValidate).toEqual(true);
     });
- 
   });
 });
