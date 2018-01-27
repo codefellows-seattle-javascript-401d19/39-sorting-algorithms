@@ -1,0 +1,24 @@
+{
+  "name": "lab-rob",
+  "version": "1.0.0",
+  "description": "## Lab 39: Sorting Algorithms ### 1/27/18",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  },
+  "scripts": {
+    "test": "jest -i --coverage",
+    "watch": "jest -i --coverage --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
