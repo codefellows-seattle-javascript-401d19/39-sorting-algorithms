@@ -8,7 +8,7 @@ This is a model of of a stable quicksort algorithm.
 
 Basic understanding of git and npm is assumed. Clone down the repo and navigate to the directory. Install by running `npm i`. If you wish to use these modules, simply copy the desired module's file into your project and require it into the script in which you would like to use it. For example:
 
-```const quicksort = require('./lib/priority-queue')```
+```const quicksort = require('./lib/quicksort')```
 
 To run tests to check functionality, do an
 
@@ -34,7 +34,9 @@ The mergesort method will take an array of numbers and return the sorted array, 
 
 The heapsort method takes an array of numbers and returns the sorted array, however, it does not use the divide and conquer scheme, although it does keep a O(n*log(n)) runtime. It works by inserting each of the values in an array into a heap. Then it extracts each of the values from that heap. Based on how a heap works, the values will be extracted in order. The sort algorithm itself has a constant space big O, however, the space complexity ultimately depends on the implementation of the heap that it depends on. The heap in this case has a space complexity of O(log(n)) which corresponds to the height of the heap, as this will be the max number of recursive calls in the call stack.
 
+### Radixsort:
 
+The radixsort method takes an array of numbers and returns the sorted array. It does not use comparison to sort, but rather uses modulo arithemtic to place the numbers in a series of 'buckets'. In this implementation, the LSD approach is used, which examines the digits in order from smallest digit to largest. This is a stable sort, as items retain relative positioning between equal values. The big O of this is theoretically O(w\*n), where w is the length of the largest word size, or the exponent of 10 of the largest value in scientific notation, and n is the number of items in the array. The memory complexity is O(n) as a copy is created in this implementation when the buckets are reduced. According to wikipedia, in execution, the performance may be actually limited to O(n*log(n)) because of the physical design of the actual hardware (i.e. how the RAM is accessed) used to run the sorting algorithm.
 ***
 ## Code Examples:
 
