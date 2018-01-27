@@ -18,7 +18,7 @@ The quicksort method can be called on any array of numbers `quicksort(`<`array`>
 ***
 ## Modules
 
-The modules being exported are the quicksort method and the mergesort. Each of these modules takes an array of numbers as input, and return that array in sorted order.
+The modules being exported are the quicksort, mergesort, heapsort and radixsort methods. Each of these modules takes an array of numbers as input, and return that array in sorted order.
 ***
 ### Quicksort:
 
