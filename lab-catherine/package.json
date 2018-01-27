@@ -1,0 +1,35 @@
+{
+  "name": "lab-catherine",
+  "version": "1.0.0",
+  "description": "Code 401 Sorting Algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccloops/39-sorting-algorithms.git"
+  },
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "quick",
+    "sort",
+    "merge",
+    "sort",
+    "radix",
+    "sort",
+    "heap",
+    "sort"
+  ],
+  "author": "Catherine Looper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccloops/39-sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/ccloops/39-sorting-algorithms#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
