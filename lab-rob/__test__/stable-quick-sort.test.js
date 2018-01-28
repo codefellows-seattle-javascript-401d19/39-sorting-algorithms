@@ -8,7 +8,7 @@ describe('stable-quick-sort.js', () => {
 
   beforeEach(() => {
     min = helpers.randInt(-1000, 1000);
-    max = helpers.randInt(-1000, 1000);
+    max = helpers.randInt(min, min + 10);
   });
 
   test('Should return an empty array if an empty array is provided', () => {
@@ -29,11 +29,29 @@ describe('stable-quick-sort.js', () => {
     let size = helpers.randInt(5, 15);
     
     let myArry = helpers.randIntArray(size, min, max);
-
-    expect(helpers.assertSorted(myArry)).toBeFalsy();
     
     stableQuickSort(myArry);
+    
+    expect(helpers.assertSorted(myArry)).toBeTruthy();
+  });
+  
+  test('Should return a sorted array for a medium array', () => {
+    let size = helpers.randInt(100, 999);
+    
+    let myArry = helpers.randIntArray(size, min, max);
+    
+    stableQuickSort(myArry);
+    
+    expect(helpers.assertSorted(myArry)).toBeTruthy();
+  });
+  
+  test('Should return a sorted array for a large array', () => {
+    let size = helpers.randInt(1000, 9999);
+    
+    let myArry = helpers.randIntArray(size, min, max);
 
+    stableQuickSort(myArry);
+    
     expect(helpers.assertSorted(myArry)).toBeTruthy();
   });
 });
