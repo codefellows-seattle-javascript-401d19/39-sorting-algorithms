@@ -17,7 +17,7 @@ const _duplicateMarker = (array) => {
     }else{
       map[value] ++
     }
-    array[i] = value + (map[value] / 1000000000000)
+    array[i] = value + (map[value] / 1000000000000) //need to find method to define this magic number
   }
 }
 
@@ -25,17 +25,6 @@ const _markerRemover = (array) => {
   for(let i  = 0; i < array.length; i++){
     array[i] = Math.floor(array[i])
   }
-}
-
-const _findMaxDuplicates = (map) => {
-
-  for(let i = 0; i < array.length; i++){
-    if(array[i] > arrayMax)
-      arrayMax = array[i]
-  }
-  placeValue = String(arrayMax).match(/\d/g).length //counts number of digits
-  console.log('placeValue: ', placeValue)
-  return placeValue
 }
 
 const _quickSortHelper = (items, leftIndex, rightIndex) => {
@@ -48,7 +37,6 @@ const _quickSortHelper = (items, leftIndex, rightIndex) => {
 }
 
 const _partion = (items, leftIndex, rightIndex) => {
-  // let pivotIndex = Math.floor(rightIndex / 2)
   let pivotIndex = rightIndex
   let firstHighIndex = leftIndex
   
