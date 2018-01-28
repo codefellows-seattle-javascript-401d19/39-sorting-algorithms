@@ -14,7 +14,6 @@ const _swap = (items, a, b) => {
 };
 
 const _partition = (items, leftIndex, rightIndex) => {
-  // let pivotIndex = Math.floor(Math.random() * (rightIndex - leftIndex + 1)) + leftIndex;
   let pivotIndex = rightIndex;
 
   let firstHighIndex = leftIndex;
