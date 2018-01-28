@@ -27,6 +27,10 @@ describe('test-helpers.js', () => {
         expect(int).toBeLessThanOrEqual(10);
       });
     });
+
+    test('should throw if num is less than 0', () => {
+      expect(() => helpers.randIntArray(-5)).toThrow();
+    });
   });
 
   describe('assertSorted(arr)', () => {
