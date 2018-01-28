@@ -1,7 +1,6 @@
 'use strict';
 // find the longest num and split arr
 const radixSort = items => {
-  // console.log(items);
   if(!Array.isArray(items))
     throw new TypeError('input has to be an array');
 
@@ -23,7 +22,6 @@ const radixSort = items => {
     }
     return number.toString().split('');
   });
-  // console.log(newArray);
   
   // add zeros to match the longest num
   newArray.forEach(num => {
@@ -35,7 +33,6 @@ const radixSort = items => {
     }
   });
 
-  // console.log(newArray);
 
   let buckets = [];
   // sort count = biggest number, add number to bucket on every pass
@@ -44,7 +41,6 @@ const radixSort = items => {
       let radix = num[i];
       buckets[radix] = buckets[radix] || [];
       buckets[radix].push(num);
-      console.log(buckets);
     });
     
 

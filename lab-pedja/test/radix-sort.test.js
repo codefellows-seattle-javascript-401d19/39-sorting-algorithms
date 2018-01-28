@@ -36,8 +36,11 @@ describe('radix-sort', () => {
 
   test('Radix-sort should return sorted array if input array has random generated numbers', () => {
     let numberArray = _generateArray(5,200);
+    console.log('Before radix sorting: ', numberArray);
     let newArray = radixSort(numberArray);
+
     expect(radixSort(numberArray)).toEqual(newArray);
+    console.log('Before radix sorting: ', newArray);
   });
 
   test('Radix-sort should return sorted array if input array has random generated numbers', () => {

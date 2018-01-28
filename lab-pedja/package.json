@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest -i --coverage",
+    "test-h": "jest -i --coverage heap-sort.test.js",
+    "test-r": "jest -i --coverage radix-sort.test.js",
     "lint": "eslint ."
   },
   "keywords": ["sorting-algorithms", "javascript", "data-structures"],
