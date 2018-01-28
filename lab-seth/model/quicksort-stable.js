@@ -8,7 +8,6 @@ const quickSort = items => {
 
 const _duplicateMarker = (array) => {
   let map = {}
-  let mostDuplicates = 0
 
   for(let i = 0; i < array.length; i++){
     let value = array[i]
@@ -17,7 +16,8 @@ const _duplicateMarker = (array) => {
     }else{
       map[value] ++
     }
-    array[i] = value + (map[value] / 1000000000000) //need to find method to define this magic number
+    //need to find method to define this magic number
+    array[i] = value + (map[value] / 100000)
   }
 }
 

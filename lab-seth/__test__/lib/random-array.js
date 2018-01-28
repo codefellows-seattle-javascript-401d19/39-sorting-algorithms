@@ -12,11 +12,6 @@ const makeRandomArray = () => {
   for(let i = 0; i < arrayLength; i++){
     array.push(sign()*(Math.floor(Math.pow(Math.random()*10, elementLength))))
   }
-
-  console.log(sign)
-  console.log(arrayLength)
-  console.log(elementLength)
-  console.log(array)
   return array
 }
 
