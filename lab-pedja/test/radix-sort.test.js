@@ -35,16 +35,15 @@ describe('radix-sort', () => {
   });
 
   test('Radix-sort should return sorted array if input array has random generated numbers', () => {
-    let numberArray = _generateArray(5,200);
-    console.log('Before radix sorting: ', numberArray);
+    let numberArray = _generateArray(5000,20000);
     let newArray = radixSort(numberArray);
-
     expect(radixSort(numberArray)).toEqual(newArray);
-    console.log('Before radix sorting: ', newArray);
   });
-
+  
   test('Radix-sort should return sorted array if input array has random generated numbers', () => {
     let numberArray = [4,2,12,41,1,23,15,76,123,1000]
+    console.log('Before radix sorting: ', numberArray);
     expect(radixSort(numberArray)).toEqual([1,2,4,12,15,23,41,76,123,1000]);
+    console.log('Before radix sorting: ', numberArray);
   });
 });
