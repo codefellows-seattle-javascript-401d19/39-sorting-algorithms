@@ -1,3 +1,5 @@
+'use strict'
+
 const quickSort = items => {
   _quickSortHelper(items, 0, items.length - 1)
 }

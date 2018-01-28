@@ -1,3 +1,4 @@
+'use strict'
 //naive implementation
 const mergeSort = items => {
   let output = [] //not ideal here...
@@ -14,14 +15,16 @@ const mergeSort = items => {
 
   while(leftSide.length || rightSide.length){
     //if only elements on left side 
-    if(leftSide.leftSide && !rightSide.length){
+    if(leftSide.length && !rightSide.length){
       output.push(...leftSide)
+      // output = output.concat(leftSide)
       break  
     }
 
     //if only elements on right side
-    if(!leftSide.leftSide && rightSide.length) {
+    if(!leftSide.length && rightSide.length) {
       output.push(...rightSide)
+      // output = output.concat(rightSide)
       break  
     }
 
