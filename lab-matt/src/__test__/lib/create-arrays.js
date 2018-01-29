@@ -32,6 +32,14 @@ createArray.large = () => {
   return array;
 };
 
+createArray.extraLarge = () => {
+  let array = [];
+  for (let i = 0; i < 100000; i ++) {
+    array.push(Math.floor(Math.random() * 100000));
+  }
+  return array;
+};
+
 createArray.testMinToMax = (array) => {
   array.forEach((each, i, arr) => {
     if (i === arr.length - 1) {

@@ -1,13 +1,13 @@
 'use strict';
 const createArray = require('./lib/create-arrays');
-const quickSort = require('../lib/quick-sort');
+const mergeSort = require('../lib/merge-sort');
 
-describe('quick-sort.js', () => {
+describe('merge-sort.js', () => {
   test('empty array returns an empty array', () => {
     let empty = createArray.empty();
     expect(empty.length).toEqual(0);
 
-    quickSort(empty);
+    mergeSort(empty);
     expect(empty).toEqual([]);
 
     createArray.testMinToMax(empty);
@@ -17,7 +17,7 @@ describe('quick-sort.js', () => {
     let single = createArray.single();
     expect(single.length).toEqual(1);
 
-    quickSort(single);
+    mergeSort(single);
     expect(single.length).toEqual(1);
 
     createArray.testMinToMax(single);
@@ -31,7 +31,7 @@ describe('quick-sort.js', () => {
       createArray.testMinToMax(small)
     }).toThrow();
     
-    quickSort(small);
+    mergeSort(small);
     expect(small.length).toEqual(20);
     
     createArray.testMinToMax(small);
@@ -45,7 +45,7 @@ describe('quick-sort.js', () => {
       createArray.testMinToMax(medium)
     }).toThrow();
 
-    quickSort(medium);
+    mergeSort(medium);
     expect(medium.length).toEqual(500);
 
     createArray.testMinToMax(medium);
@@ -59,7 +59,7 @@ describe('quick-sort.js', () => {
       createArray.testMinToMax(large)
     }).toThrow();
 
-    quickSort(large);
+    mergeSort(large);
     expect(large.length).toEqual(10000);
 
     createArray.testMinToMax(large);
@@ -73,7 +73,7 @@ describe('quick-sort.js', () => {
       createArray.testMinToMax(extraLarge)
     }).toThrow();
 
-    quickSort(extraLarge);
+    mergeSort(extraLarge);
     expect(extraLarge.length).toEqual(100000);
 
     createArray.testMinToMax(extraLarge);
