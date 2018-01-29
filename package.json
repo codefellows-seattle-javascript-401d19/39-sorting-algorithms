@@ -1,0 +1,25 @@
+{
+  "name": "39-sorting-algorithms",
+  "version": "1.0.0",
+  "description": "Sorting-Algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerrynordstrom/39-sorting-algorithms.git"
+  },
+  "author": "Kerry Nordstrom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kerrynordstrom/39-sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/kerrynordstrom/39-sorting-algorithms#readme",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
+  "dependencies": {
+    "inquirer": "^5.0.1"
+  }
+}
