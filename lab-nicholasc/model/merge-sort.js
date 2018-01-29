@@ -1,5 +1,4 @@
 const mergeSort = items => {
-  let output = [];
 
   if(items.length < 2)
     return items;
@@ -13,20 +12,20 @@ const mergeSort = items => {
 
   while(leftSide.length || rightSide.length){
     if(leftSide.length && !rightSide.length){
-      output.push(...leftSide);
+      items.push(...leftSide);
       break;
     }
     if(rightSide.length && !leftSide.length){
-      output.push(...rightSide);
+      items.push(...rightSide);
       break;
     }
     if(rightSide[0] < leftSide[0])
-      output.push(rightSide.shift());
+      items.push(rightSide.shift());
     else
-      output.push(leftSide.shift());
+      items.push(leftSide.shift());
   }
 
-  return output;
+  return items;
 };
 
 
