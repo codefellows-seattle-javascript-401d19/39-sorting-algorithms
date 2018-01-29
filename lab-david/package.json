@@ -1,0 +1,17 @@
+{
+  "name": "lab-david",
+  "version": "1.0.0",
+  "description": "This is a budget tracker built with ReactJS and redux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage",
+    "watch": "jest -i --coverage --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
