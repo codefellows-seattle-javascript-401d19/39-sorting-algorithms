@@ -1,0 +1,24 @@
+{
+  "name": "39-sorting-algorithms",
+  "version": "1.0.0",
+  "description": "Lab 39 - CodeFellows 401d19 JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage",
+    "test-watch": "jest -i --coverage --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snobeard/39-sorting-algorithms.git"
+  },
+  "author": "Matthew LeBlanc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Snobeard/39-sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/Snobeard/39-sorting-algorithms#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
