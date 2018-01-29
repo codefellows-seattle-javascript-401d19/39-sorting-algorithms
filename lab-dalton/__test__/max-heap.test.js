@@ -1,6 +1,6 @@
 'use strict';
 
-const MaxHeap = require('../lib/max-heap');
+const MaxHeap = require('../src/max-heap');
 
 describe('max-heap.js', () => {
   test('insert method should throw an error if value is not a number', () => {
