@@ -1,6 +1,6 @@
 'use strict';
 
-const quickSort = items => {
+const quickSort = (items) => {
   _quicksortHelper(items,0,items.length - 1);
 };
 
@@ -34,6 +34,6 @@ const _swap = (items,indexA,indexB) => {
   items[indexA] = items[indexB];
   items[indexB] = helper;
 };
-
-
+let arr = [22,33,3,6,6,9,13];
+console.log(quickSort(arr));
 module.exports = quickSort;
