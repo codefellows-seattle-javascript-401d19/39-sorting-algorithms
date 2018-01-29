@@ -41,7 +41,7 @@ describe('merge sort', () => {
   });
 
   test('merge sort should sort on huge sorted array ', () => {
-    let testArray = _generateArray(1,000, 5,000);
+    let testArray = _generateArray(1000, 5000);
     mergeSort(testArray);
     expect(testArray).toEqual(testArray); 
   });

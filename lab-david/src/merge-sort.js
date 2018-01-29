@@ -4,19 +4,17 @@
 // MERGE SORT
 //-------------------------------------------------------------
 
-const mergeSort = items => {
-  let output = [];
+const mergeSort = (array) => {
 
-  if(items.length < 2)
-    return items;
+  if(array.length < 2)
+    return array;
 
-  if(items.length === 2)
-    return items[0] < items[1] ? items : items.reverse();
+  if(array.length === 2)
+    return array[0] < array[1] ? array : array.reverse();
 
-  let pivot = Math.floor(items.length / 2);
-
-  let leftSide = mergeSort(items.slice(0, pivot));
-  let rightSide = mergeSort(items.slice(pivot));
+  let pivot = Math.floor(array.length / 2);
+  let leftSide = mergeSort(array.slice(0, pivot));
+  let rightSide = mergeSort(array.slice(pivot));
 
   while(leftSide.length || rightSide.length){
     if(leftSide.length && !rightSide.length){
@@ -30,7 +28,7 @@ const mergeSort = items => {
     if(leftSide[0] <= rightSide[0])
       output.push(leftSide.shift());
   }
-  return output;
+  return array;
 }
 
 module.exports = mergeSort;
