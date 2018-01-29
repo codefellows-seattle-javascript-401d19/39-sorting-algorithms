@@ -1,0 +1,19 @@
+{
+  "name": "sorting-algorithms-lab39-pedja",
+  "version": "1.0.0",
+  "description": "Implementing sorting algorithms in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage",
+    "test-h": "jest -i --coverage heap-sort.test.js",
+    "test-r": "jest -i --coverage radix-sort.test.js",
+    "lint": "eslint ."
+  },
+  "keywords": ["sorting-algorithms", "javascript", "data-structures"],
+  "author": "Pedja Josifovic",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
