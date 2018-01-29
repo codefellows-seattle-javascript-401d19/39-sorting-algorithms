@@ -28,7 +28,7 @@ describe('merge-sort.js', () => {
     expect(small.length).toEqual(20);
 
     expect(() => {
-      createArray.testMinToMax(small)
+      createArray.testMinToMax(small);
     }).toThrow();
     
     mergeSort(small);
@@ -42,7 +42,7 @@ describe('merge-sort.js', () => {
     expect(medium.length).toEqual(500);
 
     expect(() => {
-      createArray.testMinToMax(medium)
+      createArray.testMinToMax(medium);
     }).toThrow();
 
     mergeSort(medium);
@@ -56,7 +56,7 @@ describe('merge-sort.js', () => {
     expect(large.length).toEqual(10000);
 
     expect(() => {
-      createArray.testMinToMax(large)
+      createArray.testMinToMax(large);
     }).toThrow();
 
     mergeSort(large);
@@ -70,7 +70,7 @@ describe('merge-sort.js', () => {
     expect(extraLarge.length).toEqual(100000);
 
     expect(() => {
-      createArray.testMinToMax(extraLarge)
+      createArray.testMinToMax(extraLarge);
     }).toThrow();
 
     mergeSort(extraLarge);

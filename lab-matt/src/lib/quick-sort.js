@@ -1,4 +1,4 @@
-module.exports = (items) => {
+module.exports = function quickSort(items) {
   _quickSort(items, 0, items.length-1);
 };
 

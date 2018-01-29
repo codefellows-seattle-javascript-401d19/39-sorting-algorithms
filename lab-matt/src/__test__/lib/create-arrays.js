@@ -43,11 +43,11 @@ createArray.extraLarge = () => {
 createArray.testMinToMax = (array) => {
   array.forEach((each, i, arr) => {
     if (i === arr.length - 1) {
-      return
+      return;
     } else {
       if (each > arr[i + 1]) {
         throw new Error(`Test Failed at index: ${i}
-${each} is greater than the next element: ${arr[i + 1]}`)
+${each} is greater than the next element: ${arr[i + 1]}`);
       }
     }
   });
