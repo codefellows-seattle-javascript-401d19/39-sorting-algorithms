@@ -32,5 +32,7 @@ const mergeSort = (items) => {
   return output;
 };
 
+let array = [3,4,9,10,11,11,22,33,2];
+mergeSort(array);
 module.exports = mergeSort;
 
